@@ -77,7 +77,7 @@ export const getSearchSuggestions = cache(
 );
 
 export const getMovieDetail = cache(
-    async (id: number) => {
+    async (id: string) => {
         const res = await fetch(
             `http://localhost:3000/api/movies/details/${id}`,
             {
@@ -93,7 +93,7 @@ export const getMovieDetail = cache(
 );
 
 export const getSeriesDetail = cache(
-    async (id: number) => {
+    async (id: string) => {
         const res = await fetch(
             `http://localhost:3000/api/series/details/${id}`,
             {

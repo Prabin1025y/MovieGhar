@@ -21,7 +21,6 @@ export async function GET() {
             poster_path: item.poster_path ? process.env.TMDB_IMAGE_POSTER + item.poster_path : item.poster_path,
             backdrop_path: item.backdrop_path ? process.env.TMDB_IMAGE_BANNER + item.backdrop_path : item.poster_path,
         }))}
-        console.log(data);
         return Response.json(data);
     } catch (error) {
         return Response.json(

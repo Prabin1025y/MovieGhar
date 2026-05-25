@@ -27,7 +27,6 @@ export async function GET() {
                     : item.poster_path,
             })),
         };
-        console.log(data);
         return Response.json(data);
     } catch (error) {
         return Response.json(

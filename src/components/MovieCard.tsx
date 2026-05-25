@@ -32,7 +32,7 @@ const MovieCard = ({
             <div className="bg-card dark:bg-slate-800/50 border rounded-md overflow-hidden shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
                 <div className="relative">
                     <Link
-                        href={`/anime/${id}`}
+                        href={`/movie/${id}?type=${mediaType === "tv" ? "tv" : "movie"}`}
                         prefetch={false}
                     >
                         <Image
