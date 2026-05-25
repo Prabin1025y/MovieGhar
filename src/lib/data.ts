@@ -1,7 +1,7 @@
 import { cache } from "react";
 
 export const getTrendingMovies = cache(async () => {
-    const res = await fetch("http://localhost:3000/api/movies/trending", {
+    const res = await fetch("process.env.NEXT_PUBLIC_BACKEND_URL/api/movies/trending", {
         cache: "no-store",
     });
 
@@ -12,7 +12,7 @@ export const getTrendingMovies = cache(async () => {
 });
 
 export const getAllTimeBestMovies = cache(async () => {
-    const res = await fetch("http://localhost:3000/api/movies/alltimebest", {
+    const res = await fetch("process.env.NEXT_PUBLIC_BACKEND_URL/api/movies/alltimebest", {
         cache: "no-store",
     });
 
@@ -23,7 +23,7 @@ export const getAllTimeBestMovies = cache(async () => {
 });
 
 export const getTrendingSeries = cache(async () => {
-    const res = await fetch("http://localhost:3000/api/series/trending", {
+    const res = await fetch("process.env.NEXT_PUBLIC_BACKEND_URL/api/series/trending", {
         cache: "no-store",
     });
 
@@ -34,7 +34,7 @@ export const getTrendingSeries = cache(async () => {
 });
 
 export const getAllTimeBestSeries = cache(async () => {
-    const res = await fetch("http://localhost:3000/api/series/alltimebest", {
+    const res = await fetch("process.env.NEXT_PUBLIC_BACKEND_URL/api/series/alltimebest", {
         cache: "no-store",
     });
 
@@ -47,7 +47,7 @@ export const getAllTimeBestSeries = cache(async () => {
 export const getSearchResults = cache(
     async (query: string = "", page: string = "1") => {
         const res = await fetch(
-            `http://localhost:3000/api/search/data?query=${query}&page=${page}`,
+            `process.env.NEXT_PUBLIC_BACKEND_URL/api/search/data?query=${query}&page=${page}`,
             {
                 cache: "no-store",
             },
@@ -63,7 +63,7 @@ export const getSearchResults = cache(
 export const getSearchSuggestions = cache(
     async (query: string = "") => {
         const res = await fetch(
-            `http://localhost:3000/api/search/suggestions?query=${query}`,
+            `process.env.NEXT_PUBLIC_BACKEND_URL/api/search/suggestions?query=${query}`,
             {
                 cache: "no-store",
             },
@@ -79,7 +79,7 @@ export const getSearchSuggestions = cache(
 export const getMovieDetail = cache(
     async (id: string) => {
         const res = await fetch(
-            `http://localhost:3000/api/movies/details/${id}`,
+            `process.env.NEXT_PUBLIC_BACKEND_URL/api/movies/details/${id}`,
             {
                 cache: "no-store",
             },
@@ -95,7 +95,7 @@ export const getMovieDetail = cache(
 export const getSeriesDetail = cache(
     async (id: string) => {
         const res = await fetch(
-            `http://localhost:3000/api/series/details/${id}`,
+            `process.env.NEXT_PUBLIC_BACKEND_URL/api/series/details/${id}`,
             {
                 cache: "no-store",
             },
