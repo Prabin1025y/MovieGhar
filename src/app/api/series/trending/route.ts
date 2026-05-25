@@ -19,10 +19,11 @@ export async function GET() {
         const data: SeriesResponse = {...result, results: result.results.map(item=>({
             ...item,
             poster_path: item.poster_path ? process.env.TMDB_IMAGE_POSTER + item.poster_path : item.poster_path,
-            backdrop_path: item.backdrop_path ? process.env.TMDB_IMAGE_BANNER + item.backdrop_path : item.poster_path,
+            backdrop_path: item.backdrop_path ? process.env.TMDB_IMAGE_BANNER + item.backdrop_path : item.backdrop_path,
         }))}
         return Response.json(data);
     } catch (error) {
+        console.error(error)
         return Response.json(
             { message: "Internal server error" },
             { status: 500 },

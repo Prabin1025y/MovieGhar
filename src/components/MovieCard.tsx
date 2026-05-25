@@ -1,9 +1,6 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import Image from "next/image";
-import AnimeTips from "./AnimeTips";
-import { Calendar, Clock, FilePlay, Star, Video } from "lucide-react";
+import { Calendar, Star } from "lucide-react";
 import Link from "next/link";
-import { timeAgo } from "@/lib/utils";
 
 interface MovieCardProps {
     id: number;

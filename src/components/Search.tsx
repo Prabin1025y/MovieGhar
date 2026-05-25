@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
-import { ArrowRight, Search, Star, FilePlay } from "lucide-react";
+import { ArrowRight, Search, Star } from "lucide-react";
 import { Popover, PopoverContent, PopoverAnchor } from "./ui/popover";
 import Image from "next/image";
 import { Button } from "./ui/button";

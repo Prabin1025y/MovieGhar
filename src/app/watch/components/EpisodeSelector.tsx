@@ -15,10 +15,9 @@ const EpisodeSelector: React.FC<EpisodeSelectorProps> = ({
 }) => {
     const searchParams = useSearchParams();
     const season = searchParams.get("s") || "1";
-    const [episodes, setEpisodes] = useState(
+    const episodes =
         series.seasons?.find((item) => item.season_number === Number(season))
-            ?.episode_count || 1,
-    );
+            ?.episode_count || 1;
 
     const [episodeRange, setEpisodeRange] = useState<{
         start: number;

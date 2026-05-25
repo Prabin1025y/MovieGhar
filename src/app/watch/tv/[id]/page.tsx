@@ -7,11 +7,10 @@ import AnimeCardsGridSkeleton, {
     VideoInfoSkeleton,
 } from "../../components/Skeletons";
 import VideoInfo from "../../components/VideoInfo";
-import { Movie, MovieDetails } from "@/types/movie";
-import { getMovieDetail, getSeriesDetail } from "@/lib/data";
 import MovieContainer from "@/components/AnimeListingHomePage/MovieContainer";
 import { SeriesDetails, TVShow } from "@/types/series";
 import EpisodeSelector from "../../components/EpisodeSelector";
+import { getSeriesDetail } from "@/lib/data";
 
 interface ResponseData {
     details: SeriesDetails;

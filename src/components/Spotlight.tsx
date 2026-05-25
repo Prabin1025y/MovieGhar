@@ -1,10 +1,8 @@
 "use client";
 import {
     Calendar,
-    Captions,
     ChevronLeft,
     ChevronRight,
-    Clock,
     Info,
     Play,
     Star,
@@ -12,7 +10,6 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { MoviesResponse } from "@/types/movie";
 import { SeriesResponse } from "@/types/series";

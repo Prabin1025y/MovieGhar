@@ -1,6 +1,5 @@
-import { Building2, Calendar, Star, Users } from "lucide-react";
+import { Building2, Calendar, Star } from "lucide-react";
 import Image from "next/image";
-import { formatDate } from "@/lib/utils";
 import { MovieDetails } from "@/types/movie";
 import { SeriesDetails } from "@/types/series";
 
@@ -15,10 +14,10 @@ const VideoInfo: React.FC<VideoInfoProps> = ({ className = "", data }) => {
             className={`${className} bg-white dark:bg-gray-900 rounded-lg p-6 grid gap-6 grid-cols-4 grid-rows-[auto auto] items-start`}
         >
             {/* Poster */}
-            {data.backdrop_path && (
+            {data.poster_path && (
                 <div className="relative row-start-1 col-start-1 col-span-1 w-32 hidden sm:block lg:w-40 xl:w-48 aspect-[2/3] overflow-hidden">
                     <Image
-                        src={data.backdrop_path}
+                        src={data.poster_path}
                         alt={
                             ("title" in data ? data.title : data.name) +
                             " Poster"

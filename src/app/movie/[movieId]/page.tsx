@@ -1,37 +1,13 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Star, Play } from "lucide-react";
+import { Calendar, Star, Play } from "lucide-react";
 import Description from "./_components/Description";
 import Link from "next/link";
-import { Metadata } from "next";
-import { AnimeDetails } from "@/types/animeDetails";
-import { ANIME_DETAILS_QUERY } from "@/lib/queries";
-import { formatDate } from "@/lib/utils";
 import { getMovieDetail, getSeriesDetail } from "@/lib/data";
 import { Movie, MovieDetails } from "@/types/movie";
 import { SeriesDetails, TVShow } from "@/types/series";
 import MovieContainer from "@/components/AnimeListingHomePage/MovieContainer";
-
-// export async function generateMetadata({
-//     params,
-// }: {
-//     params: Promise<{ animeId: string }>;
-// }): Promise<Metadata> {
-//     // read route params
-//     const { animeId } = await params;
-
-//     const data: AnimeDetails = await fetchData(Number(animeId));
-
-//     return {
-//         title:
-//             `${data.title.english || data.title.romaji || data.title.native || "Anime Detail"}  | AnimeGhar` ||
-//             "AnimeGhar - Watch Anime Online",
-//         description:
-//             `Watch ${data.title.english || data.title.romaji || data.title.native || "Anime"} episodes online for free without any ads and distractions.` ||
-//             "Watch your favorite anime episodes online for free without any ads and distractions.",
-//     };
-// }
 
 interface ResponseData {
     details: MovieDetails | SeriesDetails;
@@ -68,16 +44,29 @@ export default async function MovieDetailsPage({
     }
 
     return (
-        <div className="min-h-screen dark:bg-slate-950 mt-16 px-5 sm:px-10 md:px-20">
+        <div className="min-h-screen mt-16 px-5 sm:px-10 md:px-20">
             <div className="relative">
                 <div className="relative max-w-7xl container mx-auto py-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div style={{opacity: "0.4"}} className="absolute inset-0 -z-10">
+                        <Image
+                            src={
+                                details.backdrop_path ||
+                                details.poster_path ||
+                                "/placeholder.svg"
+                            }
+                            alt={`${("title" in details ? details.title : details.name) || "Anime"} backdrop`}
+                            fill
+                            priority
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start ">
                         {/* Movie Poster - Now in portrait orientation */}
                         <div className="lg:col-span-1">
                             <div className="relative mx-auto max-w-sm">
                                 <Image
                                     src={
-                                        details?.backdrop_path ||
+                                        details?.poster_path ||
                                         "/placeholder.svg"
                                     }
                                     alt={`${("title" in details ? details.title : details.name) || "Anime"} poster`}

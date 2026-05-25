@@ -56,6 +56,7 @@ export async function GET(request: Request, { params }: RouteProps) {
         }));
         return Response.json({ details, recommendations });
     } catch (error) {
+        console.error(error)
         return Response.json(
             { message: "Internal server error" },
             { status: 500 },
