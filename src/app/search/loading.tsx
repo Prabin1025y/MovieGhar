@@ -6,7 +6,7 @@ const loading = () => {
         <div className="w-full pt-10">
             <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-4 gap-5">
                 <div className="col-span-3 grid grid-cols-4 gap-3">
-                    <p className="col-span-4 py-4 text-2xl text-cyan-500 font-semibold">
+                    <p className="col-span-4 py-4 text-2xl text-emerald-500 font-semibold">
                         Searching...
                     </p>
 
@@ -16,7 +16,7 @@ const loading = () => {
                 </div>
 
                 <div className="col-span-1">
-                    <p className="py-4 text-2xl text-cyan-500 font-semibold">
+                    <p className="py-4 text-2xl text-emerald-500 font-semibold">
                         Most Popular Animes
                     </p>
 

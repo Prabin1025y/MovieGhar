@@ -75,7 +75,7 @@ const VideoInfo: React.FC<VideoInfoProps> = ({ className = "", data }) => {
                     {data.genres?.map((genre) => (
                         <span
                             key={genre.id}
-                            className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm rounded-full"
+                            className="px-3 py-1 bg-gradient-to-r from-emerald-400 to-teal-500 text-white text-sm rounded-full"
                         >
                             {genre.name}
                         </span>

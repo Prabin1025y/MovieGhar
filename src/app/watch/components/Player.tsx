@@ -465,7 +465,7 @@ const Player: React.FC<PlayerProps> = ({
                     {/* Slider for duration of video */}
                     <div className="mb-4">
                         <Slider
-                            colorClass="bg-cyan-600/70"
+                            colorClass="bg-emerald-600/70"
                             defaultValue={[0]}
                             value={played ? [played * 100] : [0]}
                             max={100}

@@ -22,7 +22,7 @@ const MovieCarousel = ({
             style={{ gridArea: "featured" }}
             className="space-y-6"
         >
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-purple-500 bg-clip-text text-transparent">
                 {title}
             </h2>
             <div className="grid grid-cols-1 gap-6">

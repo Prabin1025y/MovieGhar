@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Play,  Tv, Download,  ArrowRight, Globe, Smartphone } from "lucide-react"
+import { Play,  Tv,  ArrowRight, Globe,  TabletSmartphone, PlaySquare } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -9,53 +9,52 @@ const features = [
     {
         icon: Tv,
         title: "HD Streaming",
-        description: "Watch your favorite anime in crystal clear HD quality with no buffering.",
+        description: "Watch your favorite movies in crystal clear HD quality with no buffering.",
     },
     {
-        icon: Download,
-        title: "Offline Viewing",
-        description: "Download episodes to watch offline anytime, anywhere without internet.",
+        icon: PlaySquare,
+        title: "Movies + Series",
+        description: "Movies and Series both available",
     },
     {
         icon: Globe,
         title: "Multi-Language",
-        description: "Enjoy anime with subtitles and dubbing in multiple languages.",
+        description: "Enjoy movies with subtitles  in multiple languages.",
     },
     {
-        icon: Smartphone,
+        icon: TabletSmartphone,
         title: "All Devices",
-        description: "Stream seamlessly across all your devices - phone, tablet, TV, and desktop.",
+        description: "Stream seamlessly across your phone, tablet, TV, and desktop.",
     },
 ]
 
-
 export default function Landing() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+        <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
             {/* Hero Section */}
             <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Content */}
                         <div>
-                            <Badge variant="secondary" className="mb-4bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 hover:bg-cyan-200 dark:hover:bg-cyan-800">
-                                🎌 Your Own Anime Streaming Platform
+                            <Badge variant="secondary" className="mb-4 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 dark:hover:bg-emerald-800">
+                                🎬 Your Own Movie Streaming Platform
                             </Badge>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-600 via-blue-600 to-teal-600 bg-clip-text text-transparent leading-tight">
-                                Your Gateway to Anime Universe
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 bg-clip-text text-transparent leading-tight">
+                                Your Gateway to Movie Night
                             </h1>
 
                             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                                Discover thousands of anime series and movies. From classic masterpieces to the latest releases, stream
-                                your favorite anime in HD quality with subtitles and dubbing options.
+                                Discover blockbuster hits, timeless classics, and the latest releases. Stream your favorite movies in HD
+                                quality with subtitles options.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-12">
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="bg-gradient-to-r rounded-full w-full cursor-pointer from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg group"
+                                    className="bg-gradient-to-r rounded-full w-full cursor-pointer from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-3 text-lg group"
                                 >
                                     <Link href="/home" prefetch={false}>
                                         <Play className="mr-2 w-5 h-5" />
@@ -68,13 +67,12 @@ export default function Landing() {
                             {/* Stats */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                 {[
-                                    { value: "10K+", label: "Anime Episodes" },
-                                    { value: "500+", label: "Series Available" },
-                                    { value: "1M+", label: "Happy Users" },
+                                    { value: "10K+", label: "Movies Available" },
+                                    { value: "500+", label: "Top Picks" },
                                     { value: "50+", label: "Languages" },
                                 ].map((stat, index) => (
                                     <div key={index} className="text-center">
-                                        <div className="text-2xl sm:text-3xl font-bold text-cyan-600 dark:text-cyan-400">{stat.value}</div>
+                                        <div className="text-2xl sm:text-3xl font-bold text-emerald-600 dark:text-emerald-400">{stat.value}</div>
                                         <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
                                     </div>
                                 ))}
@@ -86,10 +84,11 @@ export default function Landing() {
                         <div className="relative">
                             <Image
                                 src="/landing.png"
+                                loading="eager"
                                 width={800}
                                 height={600}
-                                alt="Featured Anime"
-                                className="w-full h-auto drop-shadow-2xl shadow-cyan-500 transition-transform duration-300 group-hover:scale-105"
+                                alt="Featured Movie"
+                                className="w-full h-auto drop-shadow-2xl shadow-emerald-500 transition-transform duration-300 group-hover:scale-105"
                             />
                         </div>
                     </div>
@@ -100,12 +99,11 @@ export default function Landing() {
             <section id="features" className="py-20 bg-white/50 dark:bg-gray-800/50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
-                            Why Choose AnimeGhar?
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">
+                            Why Choose MovieGhar?
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Experience anime like never before with our premium streaming features designed for true anime
-                            enthusiasts.
+                            Enjoy movie night like never before with premium streaming features built for cinematic lovers.
                         </p>
                     </div>
 
@@ -116,7 +114,7 @@ export default function Landing() {
                                 className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:-translate-y-2"
                             >
                                 <CardHeader className="text-center pb-4">
-                                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <feature.icon className="w-8 h-8 text-white" />
                                     </div>
                                     <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>

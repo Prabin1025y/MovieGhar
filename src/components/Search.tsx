@@ -44,7 +44,7 @@ const SearchInput = () => {
         e.preventDefault();
         setIsPopoverOpen(false);
         setSearchTerm("");
-        router.push(`/search/${searchTerm}`);
+        router.push(`/search?query=${searchTerm}`);
     };
 
     const handleOnBlur = () => {
@@ -76,12 +76,12 @@ const SearchInput = () => {
                             onChange={(e) => setSearchTerm(e.target.value)}
                             type="text"
                             placeholder="Search..."
-                            className="pl-10 w-48 md:w-xs peer focus-visible:ring-0 focus-visible:border-cyan-500"
+                            className="pl-10 w-48 md:w-xs peer focus-visible:ring-0 focus-visible:border-emerald-500"
                         />
-                        <Search className="absolute left-2 h-4 w-4 text-slate-700 dark:text-slate-300 peer-focus:text-cyan-500 dark:peer-focus:text-cyan-400 " />
+                        <Search className="absolute left-2 h-4 w-4 text-slate-700 dark:text-slate-300 peer-focus:text-emerald-500 dark:peer-focus:text-emerald-400 " />
                         <Button
                             asChild
-                            className={`absolute right-0 h-full hover:bg-cyan-600 rounded-l-none bg-cyan-500 transition-opacity ${searchTerm.trim() !== "" ? "opacity-100" : "opacity-0"}`}
+                            className={`absolute right-0 h-full hover:bg-emerald-600 rounded-l-none bg-emerald-500 transition-opacity ${searchTerm.trim() !== "" ? "opacity-100" : "opacity-0"}`}
                         >
                             <Link
                                 href={`/search/${searchTerm}`}
@@ -95,7 +95,7 @@ const SearchInput = () => {
                 {/* </PopoverTrigger> */}
                 <PopoverContent
                     onOpenAutoFocus={(e) => e.preventDefault()}
-                    className="w-80 p-1 bg-cyan-50 dark:bg-[#061e2e] border-cyan-600"
+                    className="w-80 p-1 bg-emerald-50 dark:bg-[#0a2e1e] border-emerald-600"
                 >
                     <div className="grid gap-2">
                         {suggestions.map((suggestion, index) => (
@@ -103,7 +103,7 @@ const SearchInput = () => {
                                 prefetch={false}
                                 href={`/anime/${suggestion.id}`}
                                 key={`${suggestion.id}-${index}`}
-                                className="w-full h-16 hover:bg-cyan-100/20 cursor-pointer rounded-md flex items-center gap-2"
+                                className="w-full h-16 hover:bg-emerald-100/20 cursor-pointer rounded-md flex items-center gap-2"
                             >
                                 <Image
                                     src={

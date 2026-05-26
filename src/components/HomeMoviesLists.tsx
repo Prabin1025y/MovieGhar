@@ -15,7 +15,7 @@ export default async function HomeMoviesLists({
     const allTimeBestSeries: SeriesResponse = await getAllTimeBestSeries();
 
     return (
-        <div className="w-full py-12 px-8 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 relative">
+        <div className="w-full py-12 px-8 bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 relative">
             <div className="max-w-7xl mx-auto grid gap-8">
                 <MovieCarousel
                     movies={trendingMovies.results}

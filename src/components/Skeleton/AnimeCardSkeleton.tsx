@@ -4,7 +4,7 @@ import { Skeleton } from "../ui/skeleton";
 const AnimeCardSkeleton = () => {
   return (
     <div className="group cursor-pointer transition-all duration-300 hover:scale-105 max-w-52">
-      <div className="bg-card dark:bg-slate-800/50 border rounded-md overflow-hidden shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
+      <div className="bg-card dark:bg-slate-800/50 border rounded-md overflow-hidden shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
         <div className="relative">
           {/* Image skeleton */}
           <Skeleton className="w-full h-64" />

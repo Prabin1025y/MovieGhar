@@ -16,7 +16,7 @@ const TrendingAnimeSkeleton: React.FC = () => {
                         {Array.from({ length: 6 }).map((_, i) => (
                             <div key={i} className="relative w-[200px] flex-shrink-0">
                                 <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-gray-300 dark:bg-gray-800" />
-                                <div className="absolute top-2 left-2 w-12 h-6 bg-cyan-400/60 rounded" />
+                                <div className="absolute top-2 left-2 w-12 h-6 bg-emerald-400/60 rounded" />
                                 <div className="mt-2 h-5 w-32 bg-gray-300 dark:bg-gray-700 rounded" />
                             </div>
                         ))}

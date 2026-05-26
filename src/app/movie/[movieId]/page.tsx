@@ -52,7 +52,7 @@ export default async function MovieDetailsPage({
                             src={
                                 details.backdrop_path ||
                                 details.poster_path ||
-                                "/placeholder.svg"
+                                "/placeholder.png"
                             }
                             alt={`${("title" in details ? details.title : details.name) || "Anime"} backdrop`}
                             fill
@@ -67,7 +67,7 @@ export default async function MovieDetailsPage({
                                 <Image
                                     src={
                                         details?.poster_path ||
-                                        "/placeholder.svg"
+                                        "/placeholder.png"
                                     }
                                     alt={`${("title" in details ? details.title : details.name) || "Anime"} poster`}
                                     width={300}
@@ -87,7 +87,7 @@ export default async function MovieDetailsPage({
                                 </h1>
                                 <div className="flex flex-wrap items-center gap-4 mb-4">
                                     <div className="flex items-center gap-1">
-                                        <Star className="h-5 w-5 text-cyan-400 fill-current" />
+                                        <Star className="h-5 w-5 text-emerald-400 fill-current" />
                                         <span className="text-xl font-semibold">
                                             {details.vote_average
                                                 ? details.vote_average.toFixed(
@@ -117,7 +117,7 @@ export default async function MovieDetailsPage({
                                         <Badge
                                             key={genre.id}
                                             variant="secondary"
-                                            className="text-white bg-cyan-500 hover:bg-cyan-500/80"
+                                            className="text-white bg-emerald-500 hover:bg-emerald-500/80"
                                         >
                                             {genre.name}
                                         </Badge>
@@ -133,7 +133,7 @@ export default async function MovieDetailsPage({
                                 <div className="grid grid-cols-1 gap-2 mb-6">
                                     <div className="space-y-3">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-medium bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ">
+                                            <span className="font-medium bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent ">
                                                 Studios:
                                             </span>
                                             <span className="text-primary/90">
@@ -147,7 +147,7 @@ export default async function MovieDetailsPage({
                                             </span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-medium bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ">
+                                            <span className="font-medium bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent ">
                                                 Status:
                                             </span>
                                             <span className="text-primary/90">
@@ -160,12 +160,12 @@ export default async function MovieDetailsPage({
                                         : details.original_name) && (
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-2">
-                                                <span className="font-medium bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ">
+                                                <span className="font-medium bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent ">
                                                     Original Name:
                                                 </span>
                                                 <Badge
                                                     variant="outline"
-                                                    className="text-xs border-cyan-300/50 text-cyan-200 bg-cyan-900/30"
+                                                    className="text-xs border-emerald-300/50 text-emerald-200 bg-emerald-900/30"
                                                 >
                                                     {"title" in details
                                                         ? details.original_title
@@ -182,7 +182,7 @@ export default async function MovieDetailsPage({
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:bg-cyan-700 text-white"
+                                            className="bg-gradient-to-r from-emerald-400 to-teal-500 hover:bg-emerald-700 text-white"
                                         >
                                             {details.status ===
                                             "NOT_YET_RELEASED" ? (

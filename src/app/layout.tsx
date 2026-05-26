@@ -35,7 +35,7 @@ export default function RootLayout({
             suppressHydrationWarning
         >
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-gray-950 dark:via-slate-950 dark:to-gray-900`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 dark:from-gray-950 dark:via-slate-950 dark:to-gray-900`}
             >
                 <DisableDevtoolInit />
                 <ThemeProvider

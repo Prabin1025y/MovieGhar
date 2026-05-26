@@ -20,7 +20,7 @@ const Description = ({ description }: { description: string }) => {
       </div>
       <Button
         variant="ghost"
-        className="mt-2 p-0 h-auto font-normal bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+        className="mt-2 p-0 h-auto font-normal bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"
         onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
       >
         {isDescriptionOpen ? (

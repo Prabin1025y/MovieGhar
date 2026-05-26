@@ -67,7 +67,7 @@ const Spotlight = ({
                         }`}
                     >
                         <Image
-                            src={movie.backdrop_path || "/placeholder.svg"}
+                            src={movie.backdrop_path || "/placeholder.png"}
                             alt={`${getTitleOfMovie(movie) || "movie"} poster`}
                             fill
                             loading="eager"
@@ -76,7 +76,7 @@ const Spotlight = ({
                         />
                         <div
                             className="absolute inset-0 transition-colors duration-300 dark:bg-gradient-to-r dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent
-                                bg-gradient-to-r from-cyan-50 via-cyan-50/60 to-transparent"
+                                bg-gradient-to-r from-emerald-50 via-emerald-50/60 to-transparent"
                         />
                         <div className="absolute inset-0 transition-colors duration-300 bg-gradient-to-t from-slate-100 via-transparent to-transparent dark:from-slate-950 dark:via-transparent dark:to-transparent" />
                     </div>
@@ -95,7 +95,7 @@ const Spotlight = ({
                                 spotlightMoviesSeries.length,
                         )
                     }
-                    className="transition-all duration-300 hover:scale-110 border-cyan-500/30 text-cyan-600 hover:bg-cyan-500/10 hover:border-cyan-500/50 dark:border-cyan-400/30 dark:text-cyan-400 dark:hover:bg-cyan-400/10 dark:hover:border-cyan-400/50"
+                    className="transition-all duration-300 hover:scale-110 border-emerald-500/30 text-emerald-600 hover:bg-emerald-500/10 hover:border-emerald-500/50 dark:border-emerald-400/30 dark:text-emerald-400 dark:hover:bg-emerald-400/10 dark:hover:border-emerald-400/50"
                 >
                     <ChevronLeft className="w-5 h-5" />
                 </Button>
@@ -109,7 +109,7 @@ const Spotlight = ({
                             (prev) => (prev + 1) % spotlightMoviesSeries.length,
                         )
                     }
-                    className="transition-all duration-300 hover:scale-110 border-cyan-500/30 text-cyan-600 hover:bg-cyan-500/10 hover:border-cyan-500/50 dark:border-cyan-400/30 dark:text-cyan-400 dark:hover:bg-cyan-400/10 dark:hover:border-cyan-400/50"
+                    className="transition-all duration-300 hover:scale-110 border-emerald-500/30 text-emerald-600 hover:bg-emerald-500/10 hover:border-emerald-500/50 dark:border-emerald-400/30 dark:text-emerald-400 dark:hover:bg-emerald-400/10 dark:hover:border-emerald-400/50"
                 >
                     <ChevronRight className="w-5 h-5" />
                 </Button>
@@ -123,12 +123,12 @@ const Spotlight = ({
                         onClick={() => setCurrentSpotlight(index)}
                         className={`relative transition-all duration-500 ${
                             index === currentSpotlight
-                                ? "w-8 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
-                                : "w-3 h-3 bg-cyan-500/30 hover:bg-cyan-500/50 rounded-full hover:scale-125 dark:bg-cyan-400/30 dark:hover:bg-cyan-400/50"
+                                ? "w-8 h-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"
+                                : "w-3 h-3 bg-emerald-500/30 hover:bg-emerald-500/50 rounded-full hover:scale-125 dark:bg-emerald-400/30 dark:hover:bg-emerald-400/50"
                         }`}
                     >
                         {index === currentSpotlight && (
-                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-pulse" />
                         )}
                     </button>
                 ))}
@@ -160,15 +160,15 @@ const Spotlight = ({
                                         <Image
                                             src={
                                                 movie.poster_path ||
-                                                "/placeholder.svg"
+                                                "/placeholder.png"
                                             }
                                             alt={`${getTitleOfMovie(movie) || "movie"} poster`}
                                             width={350}
                                             height={500}
-                                            className="rounded-xl w-auto h-auto shadow-2xl object-cover transition-all duration-500 group-hover:scale-105 group-hover:shadow-cyan-500/25  "
+                                            className="rounded-xl w-auto h-auto shadow-2xl object-cover transition-all duration-500 group-hover:scale-105 group-hover:shadow-emerald-500/25  "
                                         />
-                                        <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm -z-10" />
+                                        <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-emerald-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm -z-10" />
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@ const Spotlight = ({
                                                     genreIdToNameMap(genre) && (
                                                         <p
                                                             key={`${genre}-${index}`}
-                                                            className="rounded-md px-2 py-1 bg-linear-to-br from-cyan-100/20 to-cyan-500/40 border border-sky-500"
+                                                            className="rounded-md px-2 py-1 bg-linear-to-br from-emerald-100/20 to-emerald-500/40 border border-teal-500"
                                                         >
                                                             {genreIdToNameMap(
                                                                 genre,
@@ -255,10 +255,10 @@ const Spotlight = ({
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                                        className="cursor-pointer bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-3 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
                                     >
                                         <Link
-                                            href={`/watch/${movie.id}`}
+                                            href={`/watch/${movie.media_type}/${movie.id}`}
                                             prefetch={false}
                                         >
                                             <Play className="w-5 h-5 mr-2" />
@@ -269,10 +269,10 @@ const Spotlight = ({
                                         asChild
                                         size="lg"
                                         variant="outline"
-                                        className="hidden sm:flex cursor-pointer px-8 py-3 text-lg transition-all duration-300 hover:scale-105 border-cyan-500/30 text-cyan-600 hover:bg-cyan-500/10 dark:border-cyan-400/30 dark:text-cyan-400 dark:hover:bg-cyan-400/10"
+                                        className="hidden sm:flex cursor-pointer px-8 py-3 text-lg transition-all duration-300 hover:scale-105 border-emerald-500/30 text-emerald-600 hover:bg-emerald-500/10 dark:border-emerald-400/30 dark:text-emerald-400 dark:hover:bg-emerald-400/10"
                                     >
                                         <Link
-                                            href={`/anime/${movie.id}`}
+                                            href={`/movie/${movie.id}?type=${movie.media_type}`}
                                             prefetch={false}
                                         >
                                             <Info className="w-5 h-5 mr-2" />

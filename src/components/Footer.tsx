@@ -3,47 +3,6 @@ import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
 
 export default function Footer() {
-  // const currentYear = new Date().getFullYear()
-
-  // const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-  // const additionalButtons = [
-  //   { label: "#", icon: Hash, description: "Numbers" },
-  //   { label: "★", icon: Star, description: "Popular" },
-  //   { label: "⚡", icon: Zap, description: "Latest" },
-  // ]
-
-  // const quickLinks = [
-  //   { label: "Home", href: "/" },
-  //   { label: "Browse Anime", href: "/browse" },
-  //   { label: "Top Rated", href: "/top-rated" },
-  //   { label: "Latest Episodes", href: "/latest" },
-  //   { label: "Movies", href: "/movies" },
-  //   { label: "Genres", href: "/genres" },
-  // ]
-
-  // const supportLinks = [
-  //   { label: "Help Center", href: "/help" },
-  //   { label: "Contact Us", href: "/contact" },
-  //   { label: "Report Issue", href: "/report" },
-  //   { label: "Request Anime", href: "/request" },
-  //   { label: "FAQ", href: "/faq" },
-  //   { label: "Terms of Service", href: "/terms" },
-  // ]
-
-  // const legalLinks = [
-  //   { label: "Privacy Policy", href: "/privacy" },
-  //   { label: "Terms of Use", href: "/terms" },
-  //   { label: "DMCA", href: "/dmca" },
-  //   { label: "Cookie Policy", href: "/cookies" },
-  // ]
-
-  // const socialLinks = [
-  //   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-  //   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  //   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  //   { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
-  //   { icon: Github, href: "https://github.com", label: "GitHub" },
-  // ]
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -51,14 +10,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              {/* <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Play className="w-5 h-5 text-white" />
-              </div> */}
               <Image src="/Logo3.png" alt="Logo"  width={32} height={32} />
-              <span className="text-xl font-bold">AnimeGhar</span>
+              <span className="text-xl font-bold">MovieGhar</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Your gateway to the ultimate anime streaming experience. Discover, watch, and fall in love with anime.
+              Your gateway to the ultimate movie streaming experience. Discover, watch, and fall in love with movies.
             </p>
           </div>
 
@@ -67,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="/home" className="hover:text-white transition-colors">
-                  Browse Anime
+                  Browse Movies
                 </a>
               </li>
               <li>
@@ -109,7 +65,7 @@ export default function Footer() {
         <div className="py-2">
           <h5 className="text-sm font-semibold text-orange-800 dark:text-orange-300 mb-2">⚠️ Important Disclaimer</h5>
           <p className="text-xs text-orange-700 dark:text-orange-400 leading-relaxed">
-            <strong>Content Notice:</strong> All anime content displayed on this website is not hosted on our servers.
+            <strong>Content Notice:</strong> All content displayed on this website is not hosted on our servers.
             We do not store, upload, or distribute any copyrighted material. All content is sourced from third-party
             providers and we cannot guarantee the availability, quality, or legality of the content. We are not
             responsible for any copyright infringement or legal issues that may arise from the use of external content.
@@ -119,7 +75,7 @@ export default function Footer() {
         <Separator className="my-8 bg-gray-800" />
 
         <div className="flex flex-col sm:flex-row justify-between items-center text-gray-400">
-          <p>AnimeGhar &copy; 2025 <Link href={"https://prabinacharya1.com.np"} prefetch={false} className="hover:underline cursor-pointer">Prabin Acharya.</Link></p>
+          <p>MovieGhar &copy; 2026 <Link href={"https://prabinacharya1.com.np"} prefetch={false} className="hover:underline cursor-pointer"> Made with ❤️ for community.</Link></p>
           {/* <div className="flex space-x-6 mt-4 sm:mt-0">
             <a href="#" className="hover:text-white transition-colors">
               Privacy

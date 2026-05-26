@@ -2,7 +2,7 @@
 export const getStatusColor = (status: string) => {
   switch (status) {
     case "Ongoing":
-      return "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300"
+      return "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
     case "Completed":
       return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300"
     case "Upcoming":

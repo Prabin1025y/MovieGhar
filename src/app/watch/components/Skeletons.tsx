@@ -37,7 +37,7 @@ export const VideoInfoSkeleton: React.FC<{ className?: string }> = ({
             {Array.from({ length: 3 }).map((_, i) => (
                 <div
                     key={i}
-                    className="flex flex-col items-center w-48 space-y-2 rounded-md border border-blue-500 bg-gray-800"
+                    className="flex flex-col items-center w-48 space-y-2 rounded-md border border-emerald-500 bg-gray-800"
                 >
                     <div className="object-cover rounded w-full h-24 bg-gray-700" />
                 </div>

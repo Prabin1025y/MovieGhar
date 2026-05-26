@@ -26,7 +26,7 @@ const MovieCard = ({
         title={name}
             className={`${className} group cursor-pointer transition-all duration-300 hover:scale-105 w-full`}
         >
-            <div className="bg-card dark:bg-slate-800/50 border rounded-md overflow-hidden shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
+            <div className="bg-card dark:bg-slate-800/50 border rounded-md overflow-hidden shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
                 <div className="relative">
                     <Link
                         href={`/movie/${id}?type=${mediaType === "tv" ? "tv" : "movie"}`}
@@ -63,7 +63,7 @@ const MovieCard = ({
                                             : "N/A"}
                                     </p>
                                 </div>
-                                <div className="flex items-center text-cyan-500 gap-1">
+                                <div className="flex items-center text-emerald-500 gap-1">
                                     <Calendar size={12} />
                                     <p>
                                         {releaseDate

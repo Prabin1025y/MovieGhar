@@ -38,7 +38,7 @@ const SearchPage = () => {
             <div className="w-full pt-10">
                 <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-4 gap-5">
                     <div className="col-span-3 grid grid-cols-4 gap-3">
-                        <p className="col-span-4 py-4 text-2xl text-cyan-500 font-semibold">
+                        <p className="col-span-4 py-4 text-2xl text-emerald-500 font-semibold">
                             Searching...
                         </p>
 
@@ -48,7 +48,7 @@ const SearchPage = () => {
                     </div>
 
                     <div className="col-span-1">
-                        <p className="py-4 text-2xl text-cyan-500 font-semibold">
+                        <p className="py-4 text-2xl text-emerald-500 font-semibold">
                             Most Popular Animes
                         </p>
 
@@ -59,7 +59,7 @@ const SearchPage = () => {
         );
 
     return (
-        <div className="w-full py-12 px-8 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 relative">
+        <div className="w-full py-12 px-8 bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 relative">
             <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
                 <MovieContainer
                     movies={searchResults}
