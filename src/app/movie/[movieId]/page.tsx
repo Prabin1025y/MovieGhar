@@ -54,7 +54,7 @@ export default async function MovieDetailsPage({
                                 details.poster_path ||
                                 "/placeholder.png"
                             }
-                            alt={`${("title" in details ? details.title : details.name) || "Anime"} backdrop`}
+                            alt={`${("title" in details ? details.title : details.name) || "Movie"} backdrop`}
                             fill
                             priority
                             className="object-cover"
@@ -69,7 +69,7 @@ export default async function MovieDetailsPage({
                                         details?.poster_path ||
                                         "/placeholder.png"
                                     }
-                                    alt={`${("title" in details ? details.title : details.name) || "Anime"} poster`}
+                                    alt={`${("title" in details ? details.title : details.name) || "Movie"} poster`}
                                     width={300}
                                     height={400}
                                     className="rounded-lg shadow-2xl aspect-[2/3] object-cover"
@@ -83,7 +83,7 @@ export default async function MovieDetailsPage({
                                 <h1 className="text-4xl md:text-5xl font-bold mb-2">
                                     {("title" in details
                                         ? details.title
-                                        : details.name) || "Anime"}
+                                        : details.name) || "Movie"}
                                 </h1>
                                 <div className="flex flex-wrap items-center gap-4 mb-4">
                                     <div className="flex items-center gap-1">

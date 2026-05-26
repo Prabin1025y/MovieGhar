@@ -101,7 +101,7 @@ const SearchInput = () => {
                         {suggestions.map((suggestion, index) => (
                             <Link
                                 prefetch={false}
-                                href={`/anime/${suggestion.id}`}
+                                href={`/movie/${suggestion.id}?type=${suggestion.media_type}`}
                                 key={`${suggestion.id}-${index}`}
                                 className="w-full h-16 hover:bg-emerald-100/20 cursor-pointer rounded-md flex items-center gap-2"
                             >

@@ -18,7 +18,7 @@ const PlayerError: React.FC = () => {
                 <CardContent className="space-y-4">
                     <div className="text-center">
                         <p className="text-sm text-gray-500 mb-4">
-                            We&apos;re working to resolve this issue. In meantime feel free to explore other anime.
+                            We&apos;re working to resolve this issue. In meantime feel free to explore other movies.
                         </p>
                     </div>
                 </CardContent>

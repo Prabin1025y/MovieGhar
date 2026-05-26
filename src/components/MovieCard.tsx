@@ -42,7 +42,7 @@ const MovieCard = ({
                     </Link>
                 </div>
                 <Link
-                    href={`/anime/${id}`}
+                    href={`/movie/${id}?type=${mediaType === "tv" ? "tv" : "movie"}`}
                     prefetch={false}
                 >
                     <div className="p-2 md:p-3">

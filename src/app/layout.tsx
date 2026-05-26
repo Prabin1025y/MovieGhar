@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "AnimeGhar - Watch Anime Online",
+    title: "MovieGhar - Watch Movies Online",
     description:
-        "Watch latest anime episodes for free without any ads and distractions.",
+        "Watch latest movies and series for free without any ads and distractions.",
 };
 
 export default function RootLayout({

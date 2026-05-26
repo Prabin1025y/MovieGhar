@@ -49,7 +49,7 @@ const SearchPage = () => {
 
                     <div className="col-span-1">
                         <p className="py-4 text-2xl text-emerald-500 font-semibold">
-                            Most Popular Animes
+                            Most Popular Movies
                         </p>
 
                         <Top10Skeleton />
