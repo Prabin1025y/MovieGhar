@@ -10,6 +10,7 @@ import VideoInfo from "../../components/VideoInfo";
 import { Movie, MovieDetails } from "@/types/movie";
 import { getMovieDetail } from "@/lib/data";
 import MovieContainer from "@/components/AnimeListingHomePage/MovieContainer";
+import ServerSelector from "@/components/ServerSelector";
 
 interface ResponseData {
     details: MovieDetails;
@@ -19,6 +20,17 @@ interface ResponseData {
 const VideoPlayerPage: React.FC = () => {
     const [movieData, setMovieData] = useState<ResponseData | null>(null);
     const [othersLoading, setOthersLoading] = useState(true);
+    const [selectedServer, setSelectedServer] = useState(1);
+    const [serverURL, setServerURL] = useState(
+        process.env.NEXT_PUBLIC_SERVER_1 || "",
+    );
+
+    const SERVER_MAP: Record<number, string> = {
+        1: `${process.env.NEXT_PUBLIC_SERVER_1}/movie`,
+        2: `${process.env.NEXT_PUBLIC_SERVER_2}/movie`,
+        3: `${process.env.NEXT_PUBLIC_SERVER_3}/movie`,
+        4: `${process.env.NEXT_PUBLIC_SERVER_4}/movie`,
+    };
 
     const params = useParams<{ id: string }>();
     const movieId = params.id;
@@ -40,15 +52,27 @@ const VideoPlayerPage: React.FC = () => {
         fetchData();
     }, [movieId]);
 
+    useEffect(() => {
+        setServerURL(SERVER_MAP[selectedServer]);
+    }, [selectedServer, SERVER_MAP]);
+
+
     return (
         <div className="min-h-screen p-4 pt-24">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col gap-6">
+                    <ServerSelector
+                        currentServer={selectedServer}
+                        onServerChange={setSelectedServer}
+                        totalServers={4}
+                        className="mb-4"
+                    />
                     <div className="w-full max-w-7xl aspect-video bg-black rounded-lg flex items-center justify-center">
                         <iframe
+                            key={selectedServer}
                             ref={iframeElement}
                             // sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
-                            src={`${process.env.NEXT_PUBLIC_SERVER_1}/movie/${movieId}`}
+                            src={`${serverURL}/${movieId}`}
                             width="100%"
                             height="100%"
                             frameBorder="0"

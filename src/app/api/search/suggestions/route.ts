@@ -26,7 +26,6 @@ export async function GET(request: Request) {
                 .filter((item) => item.media_type !== "person")
                 .map((item) => ({
                     ...item,
-                    media_type: "movie",
                     poster_path: item.poster_path
                         ? process.env.TMDB_IMAGE_POSTER + item.poster_path
                         : item.poster_path,
